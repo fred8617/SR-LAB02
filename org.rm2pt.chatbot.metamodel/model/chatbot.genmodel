@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.rm2pt.chatbot.metamodel/src-gen" creationIcons="false"
+    editDirectory="/org.rm2pt.chatbot.metamodel.edit/src-gen" editorDirectory="/org.rm2pt.chatbot.metamodel.editor/src-gen"
+    modelPluginID="org.rm2pt.chatbot.metamodel" modelName="Chatbot" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>chatbot.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Chatbot" basePackage="org.rm2pt.chatbot.metamodel" disposableProviderFactory="true"
+      ecorePackage="chatbot.ecore#/">
+    <genClasses ecoreClass="chatbot.ecore#//Admin"/>
+    <genClasses ecoreClass="chatbot.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chatbot.ecore#//User/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chatbot.ecore#//User/chat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chatbot.ecore#//User/normals"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chatbot.ecore#//User/usereOpposite"/>
+    </genClasses>
+    <genClasses ecoreClass="chatbot.ecore#//Chat">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chatbot.ecore#//Chat/message"/>
+    </genClasses>
+    <genClasses ecoreClass="chatbot.ecore#//Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chatbot.ecore#//Message/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chatbot.ecore#//Message/type"/>
+    </genClasses>
+    <genClasses ecoreClass="chatbot.ecore#//NormalUser"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated chatbot -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.rm2pt.chatbot.metamodel.chatbot.presentation.ChatbotModelWizardID"
+            name="%_UI_ChatbotModelWizard_label"
+            class="org.rm2pt.chatbot.metamodel.chatbot.presentation.ChatbotModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ChatbotModelFile.gif">
+         <description>%_UI_ChatbotModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated chatbot -->
+      <editor
+            id="org.rm2pt.chatbot.metamodel.chatbot.presentation.ChatbotEditorID"
+            name="%_UI_ChatbotEditor_label"
+            icon="icons/full/obj16/ChatbotModelFile.gif"
+            extensions="chatbot"
+            class="org.rm2pt.chatbot.metamodel.chatbot.presentation.ChatbotEditor"
+            contributorClass="org.rm2pt.chatbot.metamodel.chatbot.presentation.ChatbotActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
